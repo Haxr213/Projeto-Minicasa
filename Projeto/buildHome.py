@@ -1,8 +1,11 @@
 import bpy
-#Versao f1
 
 #Alterar a pasta de destino de acordo com a localização em seu computador
-materialsFolder = "C:\\Users\\haxr7\\OneDrive\\Área de Trabalho\\Resources\\Materials\\"
+# Modificar o nome da imagem e extensão na variavel imgData 
+#  para trocar o material a sua escolha
+# Obs.: Utilizamos cores sólidas por questões de direitos autorais 
+#  das imagens usadas em exemplo
+materialsFolder = "C:\\Projeto\\Resources\\Materials\\"
 
 #Constroi um plano a partir dos vertices informados
 def build_plane(vertices, edges, imgMat):
@@ -101,7 +104,7 @@ def assign_material(object, imgMat):
 #Jardim
 vertices=[(0,0,0),(0,3,0),(3,3,0),(3,0,0)]
 edges=[]
-imgMat = materialsFolder + "grass.jpg"
+imgMat = materialsFolder + "color2.png"
 
 build_plane(vertices,edges, imgMat)
 
@@ -114,7 +117,7 @@ c = 0.011
 
 vertices=[(4 + ma, 0,0 ),(4 + ma, c, 0),(5 - ma,c,0),(5 - ma, 0, 0), (4 + ma, 0, b), (4 + ma, c, b), (5 - ma, c, b), (5 - ma, 0, b)]
 edges=[]
-imgMat = materialsFolder + "door.jpg"
+imgMat = materialsFolder + "color3.png"
 
 
 build_cube(vertices, edges, imgMat)
@@ -124,7 +127,7 @@ na = 0.040 #Espaçamento entre parede e a porta
 vertices=[(3,0,0), (3,3,0), (3,3,3), (3,0,3), (4+na,0,0), (4+na,0,2.11), (5-na,0,2.11), (5-na,0,0), (6,0,0), (6,0,3), (6,3,3), (6,3,0)]
 edges=[]
 faces=[(0, 3, 2, 1)]
-imgMat = materialsFolder + "ecobricks.jpg"
+imgMat = materialsFolder + "color4.png"
 build_custom(vertices,edges, faces, imgMat)
 
 faces=[(0, 4, 5, 6, 7, 8, 9, 3)]
@@ -139,7 +142,7 @@ build_custom(vertices,edges, faces, imgMat)
 
 vertices=[(6, 3, 0), (6, 6, 0), (6, 6, 3), (6, 3, 3)]
 edges=[]
-imgMat = materialsFolder + "ecobricks.jpg"
+imgMat = materialsFolder + "color4.png" 
 
 build_plane(vertices, edges, imgMat)
 
@@ -157,14 +160,14 @@ build_plane(vertices, edges, imgMat)
 vertices=[(1, 3, 1), (1, 3, 2), (2, 3, 2), (2, 3, 1), (0, 3, 0), (0, 3, 3), (3, 3, 3), (3, 3, 0)]
 edges=[]
 faces=[(4, 0, 3, 7), (7, 3, 2, 6), (6, 2, 1, 5), (5, 1, 0, 4)]
-imgMat = materialsFolder + "ecobricks.jpg"
+imgMat = materialsFolder + "color4.png" #Orientação diferente
 
 build_custom(vertices, edges, faces, imgMat)
 
 
 vertices=[(0, 5, 2), (0, 5, 2.5), (0, 4, 2.5), (0, 4, 2), (0, 6, 0), (0, 6, 3), (0, 3, 3), (0, 3, 0)]
 edges=[]
-imgMat = materialsFolder + "ecobricksII.jpg"
+imgMat = materialsFolder + "color4.png" #Orientação diferente
 
 build_custom(vertices, edges, faces, imgMat)
 
@@ -176,7 +179,7 @@ build_custom(vertices, edges, faces, imgMat)
 vertices=[(1, 3, 1), (2, 3, 1), (2, 3, 2), (1, 3, 2) ]
 edges=[]
 faces=[(0, 1, 2, 3)]
-imgMat = materialsFolder + "ecowood.jpg"
+imgMat = materialsFolder + "color3.png"
 build_frame(vertices, edges, faces, imgMat)
 
 #Janela banheiro
@@ -194,7 +197,7 @@ build_frame(vertices, edges, faces, imgMat)
 vertices=[(3, 0, 3), (4.5, 0, 4), (6, 0, 3) ]
 edges=[]
 faces=[(1, 2, 0)]
-imgMat = materialsFolder + "ecobricksII.jpg"
+imgMat = materialsFolder + "color4.png"
 build_custom(vertices, edges, faces, imgMat)
 
 vertices=[(3, 6, 3), (4.5, 6, 4), (6, 6, 3) ]
@@ -213,7 +216,7 @@ build_custom(vertices, edges, faces, imgMat)
 vertices=[(3, 0, 3), (4.5, 0, 4), (4.5, 6, 4), (3, 6, 3)]
 edges=[]
 faces=[(0, 1, 2, 3)]
-imgMat = materialsFolder + "roofII.jpg"
+imgMat = materialsFolder + "color1.png"
 build_custom(vertices, edges, faces, imgMat)
 
 
@@ -225,7 +228,7 @@ build_custom(vertices, edges, faces, imgMat)
 vertices=[(0, 3, 3), (0, 4.5, 4), (4.5, 4.5, 4), (4.5, 3, 3)]
 edges=[]
 faces=[(0, 1, 2, 3)]
-imgMat = materialsFolder + "roof.jpg"
+imgMat = materialsFolder + "color1.png" #Orientação diferente
 build_custom(vertices, edges, faces, imgMat)
 
 vertices=[(0, 6, 3), (0, 4.5, 4), (4.5, 4.5, 4), (4.5, 6, 3)]
@@ -239,7 +242,7 @@ build_custom(vertices, edges, faces, imgMat)
 #Piso e demais espaços
 
 vertices=[(3, 0, 0), (3, 3, 0), (6, 3, 0), (6, 0, 0)]
-imgMat = materialsFolder + "ecowood.jpg"
+imgMat = materialsFolder + "color3.png"
 build_plane(vertices, edges, imgMat)
 
 vertices=[(3, 0, 3), (3, 3, 3), (6, 3, 3), (6, 0, 3)]
@@ -257,4 +260,3 @@ build_plane(vertices, edges, imgMat)
 vertices=[(0, 3, 3), (3, 3, 3), (3, 6, 3), (0, 6, 3)]
 build_plane(vertices, edges, imgMat)
 
-#https://blender.stackexchange.com/questions/120517/rendering-a-cube-as-png-file-using-blenders-python-api

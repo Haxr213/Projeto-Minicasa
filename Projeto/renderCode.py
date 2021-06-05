@@ -5,6 +5,8 @@ scene = bpy.context.scene
 scene_obj = bpy.context.collection
 conf = bpy.data
 
+renderFolder = "C:\\Projeto\\Resources\\Render\\"
+
 #Configura a renderização de imagens utilizando as seguintes resoluções
 #   Mude os dados para adquirir imagens com mais ou menos resolução
 #   As medidas sao em pixels
@@ -112,6 +114,6 @@ for ob in scene.objects:
         bpy.context.scene.camera = ob
         name = "view" + str(i)
         i += 1
-        file = "C:\\Users\\haxr7\\OneDrive\\Área de Trabalho\\Resources\\Render\\" + name
+        file = renderFolder + name
         scene.render.filepath = file
-        bpy.ops.render.render( write_still= True)
+        bpy.ops.render.render(write_still= True)
