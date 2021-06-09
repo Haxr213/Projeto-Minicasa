@@ -73,6 +73,7 @@ namespace SweetHome {
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::PictureBox^ pictureBox6;
 	private: System::Windows::Forms::Button^ button19;
+	private: System::Windows::Forms::PrintDialog^ printDialog1;
 
 
 	protected:
@@ -123,6 +124,7 @@ namespace SweetHome {
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox6 = (gcnew System::Windows::Forms::PictureBox());
 			this->button19 = (gcnew System::Windows::Forms::Button());
+			this->printDialog1 = (gcnew System::Windows::Forms::PrintDialog());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
@@ -212,11 +214,12 @@ namespace SweetHome {
 			// 
 			// button2
 			// 
+			this->button2->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button2->Location = System::Drawing::Point(152, 12);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(94, 56);
 			this->button2->TabIndex = 7;
-			this->button2->Text = L"Aplica Contraste";
+			this->button2->Text = L"Aplica Sépia";
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
 			// 
@@ -227,70 +230,79 @@ namespace SweetHome {
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(97, 56);
 			this->button3->TabIndex = 8;
-			this->button3->Text = L"Gira Horizontalmente";
+			this->button3->Text = L"Aplica Escala de Roxo";
 			this->button3->UseVisualStyleBackColor = true;
 			this->button3->Click += gcnew System::EventHandler(this, &MyForm::button3_Click);
 			// 
 			// button4
 			// 
-			this->button4->Cursor = System::Windows::Forms::Cursors::SizeAll;
+			this->button4->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button4->Location = System::Drawing::Point(648, 12);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(97, 56);
 			this->button4->TabIndex = 11;
-			this->button4->Text = L"Gira Horizontalmente";
+			this->button4->Text = L"Aplica Esacala de Roxo";
 			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &MyForm::button4_Click);
 			// 
 			// button5
 			// 
+			this->button5->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button5->Location = System::Drawing::Point(539, 12);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(94, 56);
 			this->button5->TabIndex = 10;
-			this->button5->Text = L"Aplica Contraste";
+			this->button5->Text = L"Aplica Sépia";
 			this->button5->UseVisualStyleBackColor = true;
+			this->button5->Click += gcnew System::EventHandler(this, &MyForm::button5_Click);
 			// 
 			// button6
 			// 
-			this->button6->Cursor = System::Windows::Forms::Cursors::SizeAll;
+			this->button6->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button6->Location = System::Drawing::Point(426, 12);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(97, 56);
 			this->button6->TabIndex = 9;
-			this->button6->Text = L"Aplica Escala de Cinza na Vista A";
+			this->button6->Text = L"Aplica Escala de Cinza";
 			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &MyForm::button6_Click);
 			// 
 			// button7
 			// 
-			this->button7->Cursor = System::Windows::Forms::Cursors::SizeAll;
+			this->button7->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button7->Location = System::Drawing::Point(1022, 12);
 			this->button7->Name = L"button7";
 			this->button7->Size = System::Drawing::Size(97, 56);
 			this->button7->TabIndex = 14;
-			this->button7->Text = L"Gira Horizontalmente";
+			this->button7->Text = L"Aplica Escala de Roxo";
 			this->button7->UseVisualStyleBackColor = true;
+			this->button7->Click += gcnew System::EventHandler(this, &MyForm::button7_Click);
 			// 
 			// button8
 			// 
+			this->button8->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button8->Location = System::Drawing::Point(912, 12);
 			this->button8->Name = L"button8";
 			this->button8->Size = System::Drawing::Size(94, 56);
 			this->button8->TabIndex = 13;
-			this->button8->Text = L"Aplica Contraste";
+			this->button8->Text = L"Aplica Sépia";
 			this->button8->UseVisualStyleBackColor = true;
+			this->button8->Click += gcnew System::EventHandler(this, &MyForm::button8_Click);
 			// 
 			// button9
 			// 
-			this->button9->Cursor = System::Windows::Forms::Cursors::SizeAll;
+			this->button9->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button9->Location = System::Drawing::Point(800, 12);
 			this->button9->Name = L"button9";
 			this->button9->Size = System::Drawing::Size(97, 56);
 			this->button9->TabIndex = 12;
-			this->button9->Text = L"Aplica Escala de Cinza na Vista A";
+			this->button9->Text = L"Aplica Escala de Cinza";
 			this->button9->UseVisualStyleBackColor = true;
+			this->button9->Click += gcnew System::EventHandler(this, &MyForm::button9_Click);
 			// 
 			// button10
 			// 
+			this->button10->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button10->Location = System::Drawing::Point(515, 734);
@@ -303,22 +315,25 @@ namespace SweetHome {
 			// 
 			// button11
 			// 
-			this->button11->Cursor = System::Windows::Forms::Cursors::SizeAll;
+			this->button11->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button11->Location = System::Drawing::Point(262, 365);
 			this->button11->Name = L"button11";
 			this->button11->Size = System::Drawing::Size(97, 56);
 			this->button11->TabIndex = 20;
-			this->button11->Text = L"Gira Horizontalmente";
+			this->button11->Text = L"Aplica Escala de Roxo";
 			this->button11->UseVisualStyleBackColor = true;
+			this->button11->Click += gcnew System::EventHandler(this, &MyForm::button11_Click);
 			// 
 			// button12
 			// 
+			this->button12->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button12->Location = System::Drawing::Point(152, 365);
 			this->button12->Name = L"button12";
 			this->button12->Size = System::Drawing::Size(94, 56);
 			this->button12->TabIndex = 19;
-			this->button12->Text = L"Aplica Contraste";
+			this->button12->Text = L"Aplica Sépia";
 			this->button12->UseVisualStyleBackColor = true;
+			this->button12->Click += gcnew System::EventHandler(this, &MyForm::button12_Click);
 			// 
 			// label4
 			// 
@@ -351,25 +366,29 @@ namespace SweetHome {
 			this->button13->TabIndex = 16;
 			this->button13->Text = L"Aplica Escala de Cinza";
 			this->button13->UseVisualStyleBackColor = true;
+			this->button13->Click += gcnew System::EventHandler(this, &MyForm::button13_Click);
 			// 
 			// button14
 			// 
-			this->button14->Cursor = System::Windows::Forms::Cursors::SizeAll;
+			this->button14->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button14->Location = System::Drawing::Point(648, 365);
 			this->button14->Name = L"button14";
 			this->button14->Size = System::Drawing::Size(97, 56);
 			this->button14->TabIndex = 25;
-			this->button14->Text = L"Gira Horizontalmente";
+			this->button14->Text = L"Aplica Escala de Roxo";
 			this->button14->UseVisualStyleBackColor = true;
+			this->button14->Click += gcnew System::EventHandler(this, &MyForm::button14_Click);
 			// 
 			// button15
 			// 
+			this->button15->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button15->Location = System::Drawing::Point(538, 365);
 			this->button15->Name = L"button15";
 			this->button15->Size = System::Drawing::Size(94, 56);
 			this->button15->TabIndex = 24;
-			this->button15->Text = L"Aplica Contraste";
+			this->button15->Text = L"Aplica Sépia";
 			this->button15->UseVisualStyleBackColor = true;
+			this->button15->Click += gcnew System::EventHandler(this, &MyForm::button15_Click);
 			// 
 			// label5
 			// 
@@ -401,25 +420,29 @@ namespace SweetHome {
 			this->button16->TabIndex = 21;
 			this->button16->Text = L"Aplica Escala de Cinza";
 			this->button16->UseVisualStyleBackColor = true;
+			this->button16->Click += gcnew System::EventHandler(this, &MyForm::button16_Click);
 			// 
 			// button17
 			// 
-			this->button17->Cursor = System::Windows::Forms::Cursors::SizeAll;
+			this->button17->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button17->Location = System::Drawing::Point(1022, 365);
 			this->button17->Name = L"button17";
 			this->button17->Size = System::Drawing::Size(97, 56);
 			this->button17->TabIndex = 30;
-			this->button17->Text = L"Gira Horizontalmente";
+			this->button17->Text = L"Aplica Escala de Roxo";
 			this->button17->UseVisualStyleBackColor = true;
+			this->button17->Click += gcnew System::EventHandler(this, &MyForm::button17_Click);
 			// 
 			// button18
 			// 
+			this->button18->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button18->Location = System::Drawing::Point(912, 365);
 			this->button18->Name = L"button18";
 			this->button18->Size = System::Drawing::Size(94, 56);
 			this->button18->TabIndex = 29;
-			this->button18->Text = L"Aplica Contraste";
+			this->button18->Text = L"Aplica Sépia";
 			this->button18->UseVisualStyleBackColor = true;
+			this->button18->Click += gcnew System::EventHandler(this, &MyForm::button18_Click);
 			// 
 			// label6
 			// 
@@ -451,12 +474,17 @@ namespace SweetHome {
 			this->button19->TabIndex = 26;
 			this->button19->Text = L"Aplica Escala de Cinza";
 			this->button19->UseVisualStyleBackColor = true;
+			this->button19->Click += gcnew System::EventHandler(this, &MyForm::button19_Click);
+			// 
+			// printDialog1
+			// 
+			this->printDialog1->UseEXDialog = true;
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1373, 815);
+			this->ClientSize = System::Drawing::Size(1157, 815);
 			this->Controls->Add(this->button17);
 			this->Controls->Add(this->button18);
 			this->Controls->Add(this->label6);
@@ -530,7 +558,7 @@ namespace SweetHome {
 
 			folderName = dlg->SelectedPath;
 		}
-		string nomeArquivo = "cake.ppm";
+		string nomeArquivo = "resources\\view0_gray.ppm";
 		string diretorio;
 
 		using namespace Runtime::InteropServices;
@@ -556,7 +584,7 @@ namespace SweetHome {
 
 			folderName = dlg->SelectedPath;
 		}
-		string nomeArquivo = "cake.ppm";
+		string nomeArquivo = "resources\\view0_sepia.ppm";
 		string diretorio;
 
 		using namespace Runtime::InteropServices;
@@ -582,7 +610,7 @@ namespace SweetHome {
 
 			folderName = dlg->SelectedPath;
 		}
-		string nomeArquivo = "cake.ppm";
+		string nomeArquivo = "resources\\view0_roxo.ppm";
 		string diretorio;
 
 		using namespace Runtime::InteropServices;
@@ -608,7 +636,7 @@ namespace SweetHome {
 
 			folderName = dlg->SelectedPath;
 		}
-		string nomeArquivo = "casa2.ppm";
+		string nomeArquivo = "resources\\view1_gray.ppm";
 		string diretorio;
 
 		using namespace Runtime::InteropServices;
@@ -634,7 +662,7 @@ namespace SweetHome {
 
 			folderName = dlg->SelectedPath;
 		}
-		string nomeArquivo = "casa2.ppm";
+		string nomeArquivo = "resources\\view1_sepia.ppm";
 		string diretorio;
 
 		using namespace Runtime::InteropServices;
@@ -660,7 +688,7 @@ namespace SweetHome {
 
 			folderName = dlg->SelectedPath;
 		}
-		string nomeArquivo = "casa2.ppm";
+		string nomeArquivo = "resources\\view1_roxo.ppm";
 		string diretorio;
 
 		using namespace Runtime::InteropServices;
@@ -669,7 +697,7 @@ namespace SweetHome {
 		diretorio = chars;
 		Marshal::FreeHGlobal(IntPtr((void*)chars));
 
-		imagemHelper.aplicaEfeitos(nomeArquivo, diretorio, 2);
+		imagemHelper.aplicaEfeitos(nomeArquivo, diretorio, 3);
 	};
 
 	private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -686,7 +714,7 @@ namespace SweetHome {
 
 			folderName = dlg->SelectedPath;
 		}
-		string nomeArquivo = "casa3.ppm";
+		string nomeArquivo = "resources\\view2_gray.ppm";
 		string diretorio;
 
 		using namespace Runtime::InteropServices;
@@ -712,7 +740,7 @@ namespace SweetHome {
 
 			folderName = dlg->SelectedPath;
 		}
-		string nomeArquivo = "casa3.ppm";
+		string nomeArquivo = "resources\\view2_sepia.ppm";
 		string diretorio;
 
 		using namespace Runtime::InteropServices;
@@ -738,7 +766,7 @@ namespace SweetHome {
 
 			folderName = dlg->SelectedPath;
 		}
-		string nomeArquivo = "casa3.ppm";
+		string nomeArquivo = "resources\\view2_roxo.ppm";
 		string diretorio;
 
 		using namespace Runtime::InteropServices;
@@ -764,7 +792,7 @@ namespace SweetHome {
 
 			folderName = dlg->SelectedPath;
 		}
-		string nomeArquivo = "casa4.ppm";
+		string nomeArquivo = "resources\\view3_gray.ppm";
 		string diretorio;
 
 		using namespace Runtime::InteropServices;
@@ -790,7 +818,7 @@ namespace SweetHome {
 
 			folderName = dlg->SelectedPath;
 		}
-		string nomeArquivo = "casa4.ppm";
+		string nomeArquivo = "resources\\view3_sepia.ppm";
 		string diretorio;
 
 		using namespace Runtime::InteropServices;
@@ -816,7 +844,7 @@ namespace SweetHome {
 
 			folderName = dlg->SelectedPath;
 		}
-		string nomeArquivo = "casa4.ppm";
+		string nomeArquivo = "resources\\view3_roxo.ppm";
 		string diretorio;
 
 		using namespace Runtime::InteropServices;
@@ -842,7 +870,7 @@ namespace SweetHome {
 
 			folderName = dlg->SelectedPath;
 		}
-		string nomeArquivo = "casa5.ppm";
+		string nomeArquivo = "resources\\view4_gray.ppm";
 		string diretorio;
 
 		using namespace Runtime::InteropServices;
@@ -868,7 +896,7 @@ namespace SweetHome {
 
 			folderName = dlg->SelectedPath;
 		}
-		string nomeArquivo = "casa5.ppm";
+		string nomeArquivo = "resources\\view4_sepia.ppm";
 		string diretorio;
 
 		using namespace Runtime::InteropServices;
@@ -894,7 +922,7 @@ namespace SweetHome {
 
 			folderName = dlg->SelectedPath;
 		}
-		string nomeArquivo = "casa5.ppm";
+		string nomeArquivo = "resources\\view4_roxo.ppm";
 		string diretorio;
 
 		using namespace Runtime::InteropServices;
@@ -920,7 +948,7 @@ namespace SweetHome {
 
 			folderName = dlg->SelectedPath;
 		}
-		string nomeArquivo = "casa6.ppm";
+		string nomeArquivo = "resources\\view5_gray.ppm";
 		string diretorio;
 
 		using namespace Runtime::InteropServices;
@@ -946,7 +974,7 @@ namespace SweetHome {
 
 			folderName = dlg->SelectedPath;
 		}
-		string nomeArquivo = "casa6.ppm";
+		string nomeArquivo = "resources\\view5_sepia.ppm";
 		string diretorio;
 
 		using namespace Runtime::InteropServices;
@@ -972,7 +1000,7 @@ namespace SweetHome {
 
 			folderName = dlg->SelectedPath;
 		}
-		string nomeArquivo = "casa6.ppm";
+		string nomeArquivo = "resources\\view5_roxo.ppm";
 		string diretorio;
 
 		using namespace Runtime::InteropServices;
@@ -998,12 +1026,24 @@ namespace SweetHome {
 
 			folderName = dlg->SelectedPath;
 		}
-		string nomeArquivo1 = "cake.ppm";
-		string nomeArquivo2 = "casa2.ppm";
-		string nomeArquivo3 = "casa3.ppm";
-		string nomeArquivo4 = "casa4.ppm";
-		string nomeArquivo5 = "casa5.ppm";
-		string nomeArquivo6 = "casa6.ppm";
+		string nomeArquivoa1 = "resources\\view0_gray.ppm";
+		string nomeArquivoa2 = "resources\\view0_sepia.ppm";
+		string nomeArquivoa3 = "resources\\view0_roxo.ppm";
+		string nomeArquivob1 = "resources\\view1_gray.ppm";
+		string nomeArquivob2 = "resources\\view1_sepia.ppm";
+		string nomeArquivob3 = "resources\\view1_roxo.ppm";
+		string nomeArquivoc1 = "resources\\view2_gray.ppm";
+		string nomeArquivoc2 = "resources\\view2_sepia.ppm";
+		string nomeArquivoc3 = "resources\\view2_roxo.ppm";
+		string nomeArquivod1 = "resources\\view3_gray.ppm";
+		string nomeArquivod2 = "resources\\view3_sepia.ppm";
+		string nomeArquivod3 = "resources\\view3_roxo.ppm";
+		string nomeArquivoe1 = "resources\\view4_gray.ppm";
+		string nomeArquivoe2 = "resources\\view4_sepia.ppm";
+		string nomeArquivoe3 = "resources\\view4_roxo.ppm";
+		string nomeArquivof1 = "resources\\view5_gray.ppm";
+		string nomeArquivof2 = "resources\\view5_sepia.ppm";
+		string nomeArquivof3 = "resources\\view5_roxo.ppm";
 		string diretorio;
 
 		using namespace Runtime::InteropServices;
@@ -1017,58 +1057,58 @@ namespace SweetHome {
 			#pragma omp sections 
 			{
 				#pragma omp section
-					imagemHelper.aplicaEfeitos(nomeArquivo1, diretorio, 1);
+					imagemHelper.aplicaEfeitos(nomeArquivoa1, diretorio, 1);
 
 				#pragma omp section
-					imagemHelper.aplicaEfeitos(nomeArquivo1, diretorio, 2);
+					imagemHelper.aplicaEfeitos(nomeArquivoa2, diretorio, 2);
 
 				#pragma omp section
-					imagemHelper.aplicaEfeitos(nomeArquivo1 diretorio, 3);
+					imagemHelper.aplicaEfeitos(nomeArquivoa3, diretorio, 3);
 
-				/*#pragma omp section
-				imagemHelper.aplicaEfeitos(nomeArquivo2, diretorio, 1);
+				#pragma omp section
+					imagemHelper.aplicaEfeitos(nomeArquivob1, diretorio, 1);
 				
 				#pragma omp section
-				imagemHelper.aplicaEfeitos(nomeArquivo2, diretorio, 2);
+					imagemHelper.aplicaEfeitos(nomeArquivob2, diretorio, 2);
 
 				#pragma omp section	
-				imagemHelper.aplicaEfeitos(nomeArquivo2, diretorio, 3);
+					imagemHelper.aplicaEfeitos(nomeArquivob3, diretorio, 3);
 
 				#pragma omp section
-				imagemHelper.aplicaEfeitos(nomeArquivo3, diretorio, 1);
+					imagemHelper.aplicaEfeitos(nomeArquivoc1, diretorio, 1);
 
 				#pragma omp section
-				imagemHelper.aplicaEfeitos(nomeArquivo3, diretorio, 2);
+					imagemHelper.aplicaEfeitos(nomeArquivoc2, diretorio, 2);
+	
+				#pragma omp section
+					imagemHelper.aplicaEfeitos(nomeArquivoc3, diretorio, 3);
 
 				#pragma omp section
-				imagemHelper.aplicaEfeitos(nomeArquivo3, diretorio, 3);
+					imagemHelper.aplicaEfeitos(nomeArquivod1, diretorio, 1);
 
 				#pragma omp section
-				imagemHelper.aplicaEfeitos(nomeArquivo4, diretorio, 1);
-
-				#pragma omp section
-				imagemHelper.aplicaEfeitos(nomeArquivo4, diretorio, 2);
+					imagemHelper.aplicaEfeitos(nomeArquivod2, diretorio, 2);
 				
 				#pragma omp section				
-				imagemHelper.aplicaEfeitos(nomeArquivo4, diretorio, 3);
+					imagemHelper.aplicaEfeitos(nomeArquivod3, diretorio, 3);
 
 				#pragma omp section
-				imagemHelper.aplicaEfeitos(nomeArquivo5, diretorio, 1);
+					imagemHelper.aplicaEfeitos(nomeArquivoe1, diretorio, 1);
 				
 				#pragma omp section
-				imagemHelper.aplicaEfeitos(nomeArquivo5, diretorio, 2);
+					imagemHelper.aplicaEfeitos(nomeArquivoe2, diretorio, 2);
 				
 				#pragma omp section				
-				imagemHelper.aplicaEfeitos(nomeArquivo5, diretorio, 3);
+					imagemHelper.aplicaEfeitos(nomeArquivoe3, diretorio, 3);
 
 				#pragma omp section
-				imagemHelper.aplicaEfeitos(nomeArquivo6, diretorio, 1);
+					imagemHelper.aplicaEfeitos(nomeArquivof1, diretorio, 1);
 
 				#pragma omp section
-				imagemHelper.aplicaEfeitos(nomeArquivo6, diretorio, 2);
+					imagemHelper.aplicaEfeitos(nomeArquivof2, diretorio, 2);
 
 				#pragma omp section
-				imagemHelper.aplicaEfeitos(nomeArquivo6, diretorio, 3);*/
+					imagemHelper.aplicaEfeitos(nomeArquivof3, diretorio, 3);
 			}
 		}
 	};
